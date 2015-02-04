@@ -1,13 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name angularPortfolioApp
- * @description
- * # angularPortfolioApp
- *
- * Main module of the application.
- */
 var angularPortfolioApp = angular
   .module('angularPortfolioApp', [
     'ngAnimate',
