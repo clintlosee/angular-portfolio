@@ -1,0 +1,93 @@
+<div class="container">
+
+            <nav class="clearfix portfolioFilter">
+                <a href="" data-filter="*" class="active">All</a>
+                <a href="" data-filter=".web">Web</a>
+                <a href="" data-filter=".php">PHP</a>
+                <a href="" data-filter=".ibook">iBook</a>
+                <a href="" data-filter=".digpub">Digital Publishing</a>
+                <a href="" data-filter=".misc">Misc</a>
+            </nav>
+
+
+            <div class="portfolioContainer">
+
+                <div class="web portfolio col-sm-6 col-md-3">
+                    <div class="item">
+                        <img ng-src="images/portfolio/TitleWest.png" alt="Title West Website" />
+
+                    </div>
+                </div> <!-- End .portfolio -->
+
+                <div class="web portfolio col-sm-6 col-md-3">
+                    <div class="item">
+                        <img ng-src="images/portfolio/TitleWest.png" alt="Title West Website" />
+
+                    </div>
+                </div> <!-- End .portfolio -->
+
+                <div class="web portfolio col-sm-6 col-md-3">
+                    <div class="item">
+                        <img ng-src="images/portfolio/ClintLoseePhotography.png" alt="Clint Losee Photography" />
+
+                    </div>
+                </div> <!-- End .portfolio -->
+
+                <div class="php portfolio col-sm-6 col-md-3">
+                    <div class="item">
+                        <img ng-src="images/portfolio/FlylifeRodCo.jpg" alt="Fly Life Rod Co." />
+
+                    </div>
+                </div> <!-- End .portfolio -->
+
+                <div class="php portfolio col-sm-6 col-md-3">
+                    <div class="item">
+                        <img ng-src="images/portfolio/TitleWest.png" alt="Title West Website" />
+
+                    </div>
+                </div> <!-- End .portfolio -->
+
+                <div class="ibook portfolio col-sm-6 col-md-3">
+                    <div class="item">
+                        <img ng-src="images/portfolio/ClintLoseePhotography.png" alt="Clint Losee Photography" />
+
+                    </div>
+                </div> <!-- End .portfolio -->
+
+
+
+            </div><!-- End #content -->
+
+    </div> <!-- container -->
+    <script src="scripts/jquery.isotope.js"></script>
+    <script type="text/javascript">
+
+            $(window).load(function(){
+                var $container = $('.portfolioContainer');
+                $container.isotope({
+                    filter: '*',
+                    animationOptions: {
+                        duration: 750,
+                        easing: 'linear',
+                        queue: false
+                    }
+                });
+
+                $('.portfolioFilter a').click(function(){
+                    $('.portfolioFilter .active').removeClass('active');
+                    $(this).addClass('active');
+
+                    var selector = $(this).attr('data-filter');
+                    $container.isotope({
+                        filter: selector,
+                        animationOptions: {
+                            duration: 750,
+                            easing: 'linear',
+                            queue: false
+                        }
+                     });
+                     return false;
+                });
+            });
+
+        </script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
       <base="/">
-    <title>Clint Losee Angular Portfolio</title>
+    <title>Clint Losee Web Portfolio</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -25,19 +25,20 @@
     <!-- Add your site or application content here -->
     <header>
         <div class="header col-md-12">
-            <div class="container-fluid">            
+            <div class="container-fluid">
                 <ul class="nav navbar-nav pull-right">
                     <li><a ng-href="#/">Home</a></li>
                     <li><a ng-href="#/about">About</a></li>
+                    <li><a ng-href="#/portfolio">Portfolio</a></li>
                 </ul>
-                <h3 class="text-muted"><a href="" class="text-muted">angularPortfolio</a></h3>
+                <h3 class="text-muted"><a href="" class="text-muted">Clint Losee Web Portfolio</a></h3>
             </div>
         </div>
-    </header>  
-      
+    </header>
+
       <div class="page {{ pageClass }}" ng-view=""></div>
 
-    
+
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -76,6 +77,8 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/portfolio.js"></script>
         <!-- endbuild -->
+
 </body>
 </html>

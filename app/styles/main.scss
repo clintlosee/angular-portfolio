@@ -38,6 +38,66 @@ body {
   }
 }
 
+nav {
+    margin:1%;
+    padding:0;
+    list-style:none;
+}
+nav a {
+       float:left;
+   }
+nav a {
+    display:block;
+    padding:5px 20px;
+    text-decoration:none;
+    color:#666;
+    cursor:pointer;
+}
+nav a.active {
+    background:#ff6600;
+    color:#fff;
+}
+
+
+.portfolio {
+    overflow:hidden;
+    position:relative;
+    cursor:pointer;
+    margin:1% auto;
+}
+
+.portfolio img {
+    width:100%;
+    height:100%;
+    position:relative;
+    border:5px solid #666;
+}
+.isotope-item {
+    z-index: 2;
+}
+.isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+}
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    transition-property: height, width;
+}
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity;
+}
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;
@@ -45,35 +105,19 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
-}
+
 
 /* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
+.btn {
+font-size: 21px;
+padding: 14px 24px;
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
 
-  p + h4 {
-    margin-top: 28px;
-  }
-}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+
 
   /* Remove the padding we set earlier */
   .header,
@@ -90,18 +134,51 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+
+  .portfolioContainer {
+        width:100%;
+    }
+
+    .portfolio {
+        float:left;
+//        width:30%;
+        height:180px;
+//        margin:1%;
+    }
+    .portfolio .item {
+        height:100%;
+        clear:both;
+    }
+}
+
+/*========================================DESKTOP=========================================================*/
+@media only screen and (min-width:960px) {
+.portfolio {
+//    width:50%;
+}
+.portfolio .item:hover {
+    border:5px solid #ff6600;
+}
+
+nav a:hover {
+    background:#ff6600;
+    color:#fff;
+}
+
 }
 
 //*********** ngAnimate Styles ************//
 /* make our pages be full width and full height */
 /* positioned absolutely so that the pages can overlap each other as they enter and leave */
 .page        {
-	bottom:0; 
+	bottom:0;
 	padding-top:200px;
-	position:absolute; 
-	text-align:center;
-	top:0;  
-	width:100%; 
+	position:absolute;
+	top:0;
+	width:100%;
+}
+.content {
+    text-align:center;
 }
 
 .page h1 	{ font-size:60px; }
@@ -111,6 +188,7 @@ body {
 ============================================================================= */
 .page-home 		{ background:#00D0BC; color:#00907c; }
 .page-about 	{ background:#E59400; color:#a55400; }
+.page-portfolio { background:#00D0BC; color:#a55400; }
 
 
 /* ANIMATIONS
@@ -164,5 +242,3 @@ body {
 /* about ------------------------ */
 	.page-about.ng-enter 		{ animation:slideInRight 0.5s both ease-in; }
 	.page-about.ng-leave        { animation:slideOutLeft 0.5s both ease-in; }
-
-

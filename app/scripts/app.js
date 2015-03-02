@@ -9,7 +9,7 @@ var angularPortfolioApp = angular
     'ngSanitize',
     'ngTouch'
   ]);
-  
+
 angularPortfolioApp.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -19,6 +19,10 @@ angularPortfolioApp.config(function ($routeProvider) {
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
+      })
+      .when('/portfolio', {
+        templateUrl: 'views/portfolio.html',
+        controller: 'PortfolioCtrl'
       })
       .otherwise({
         redirectTo: '/'
